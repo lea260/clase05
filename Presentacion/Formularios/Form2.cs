@@ -55,6 +55,8 @@ namespace Presentacion.Formularios
                 txt.Location = new Point(300, y);
                 txt.Text = item.Coef.ToString();
                 txt.Name = item.Coef.ToString();
+                txt.TextChanged += new EventHandler((sender1, e1) => Txt_TextChanged(sender1, e1, txt.Text));
+                //txt.TextChanged += Txt_TextChanged;
                 this.Controls.Add(lbl1);
                 this.Controls.Add(lbl2);
                 this.Controls.Add(txt);
@@ -62,6 +64,11 @@ namespace Presentacion.Formularios
                 //cuadro de ponderacion
                 //aumentar la y
             }
+        }
+
+        private void Txt_TextChanged(object sender, EventArgs e, string texto)
+        {
+            //
         }
 
         private void button1_Click(object sender, EventArgs e)
