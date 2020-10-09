@@ -31,13 +31,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cmbsintomas = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
->>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
             this.SuspendLayout();
             // 
             // button1
@@ -68,8 +65,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "sintoma";
             // 
-<<<<<<< HEAD
-=======
+
             // label2
             // 
             this.label2.AutoSize = true;
@@ -104,19 +100,15 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "label4";
             // 
->>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
-            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1335, 652);
-<<<<<<< HEAD
-=======
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
->>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
+
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbsintomas);
             this.Controls.Add(this.button1);
@@ -132,12 +124,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbsintomas;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
->>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
+
     }
 }
