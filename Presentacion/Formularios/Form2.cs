@@ -55,7 +55,7 @@ namespace Presentacion.Formularios
                 txt.Location = new Point(300, y);
                 txt.Text = item.Coef.ToString();
                 txt.Name = item.Coef.ToString();
-                txt.TextChanged += new EventHandler((sender1, e1) => Txt_TextChanged(sender1, e1, txt.Text));
+                txt.TextChanged += new EventHandler((sender1, e1) => Txt_TextChanged(sender1, e1, txt.Text, item.Id));
                 //txt.TextChanged += Txt_TextChanged;
                 this.Controls.Add(lbl1);
                 this.Controls.Add(lbl2);
@@ -66,9 +66,24 @@ namespace Presentacion.Formularios
             }
         }
 
-        private void Txt_TextChanged(object sender, EventArgs e, string texto)
+        private void Txt_TextChanged(object sender, EventArgs e, string coef, long id)
         {
-            //
+            //            
+            //this.list.Find(x => x.Id == id);
+           bool encontrado = false;
+            int cantidad = this.list.Count;
+            int iter = 0;
+            while (!encontrado)
+            {
+                if (this.list[iter].Id==id)
+                {
+                    encontrado = true;
+                    this.list[iter].Coef = double.Parse (coef); 
+                }
+                iter++;
+            }            
+            //this.list[indice].Coef = coef;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
