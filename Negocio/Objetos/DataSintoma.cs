@@ -28,5 +28,11 @@ namespace Negocio.Objetos
         public long Id { get => id; set => id = value; }
         public string Sintoma { get => sintoma; set => sintoma = value; }        
         public double Coef { get => coef; set => coef = value; }
+
+        } 
+
+        public long Id { get => id; set => id = value; }
+        public string Sintoma { get => sintoma; set => sintoma = value; }
+
     }
 }

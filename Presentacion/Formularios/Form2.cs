@@ -14,7 +14,11 @@ namespace Presentacion.Formularios
 {
     public partial class Form2 : Form
     {
+<<<<<<< HEAD
         private int y = 70;
+=======
+        private int y = 73;
+>>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
         const int altura = 50;
         List<DataSintoma> list;
         private int indice = -1;
@@ -27,9 +31,15 @@ namespace Presentacion.Formularios
         private void Initcombox()
         {
             this.list = new List<DataSintoma>();
+<<<<<<< HEAD
             DataSintoma ds1 = new DataSintoma(1, "tos", 50.0);
             this.list.Add(ds1);
             DataSintoma ds2 = new DataSintoma(2, "gripe", 50.0);
+=======
+            DataSintoma ds1 = new DataSintoma(1, "tos");
+            this.list.Add(ds1);
+            DataSintoma ds2 = new DataSintoma(2, "gripe");
+>>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
             this.list.Add(ds2);
             cmbsintomas.DataSource = this.list;
             cmbsintomas.ValueMember = "id";
@@ -37,6 +47,7 @@ namespace Presentacion.Formularios
             //listo los sintomas;
             foreach (var item in this.list)
             {
+<<<<<<< HEAD
                 Label lbl1 = new Label();
                 lbl1.Width = 46;
                 lbl1.Height = 17;
@@ -61,11 +72,27 @@ namespace Presentacion.Formularios
                 this.Controls.Add(lbl2);
                 this.Controls.Add(txt);
                 this.y += altura;
+=======
+                TextBox txt = new TextBox();
+                txt.Width = 46;
+                txt.Height = 17;
+                txt.Location = new Point(40,y);
+                txt.Text = item.Id.ToString();
+                txt.Name = item.Id.ToString();
+                TextBox txt2 = new TextBox();
+                txt.Width = 46;
+                txt.Height = 17;
+                txt.Location = new Point(40, y);
+                txt.Text = item.Id.ToString();
+                txt.Name = item.Id.ToString();
+                this.Controls.Add(txt);
+>>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
                 //cuadro de ponderacion
                 //aumentar la y
             }
         }
 
+<<<<<<< HEAD
         private void Txt_TextChanged(object sender, EventArgs e, string coef, long id)
         {
             //            
@@ -86,6 +113,8 @@ namespace Presentacion.Formularios
 
         }
 
+=======
+>>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
         private void button1_Click(object sender, EventArgs e)
         {
             //int indice = cmbsintomas.SelectedIndex;
@@ -106,6 +135,7 @@ namespace Presentacion.Formularios
             
 
         }
+<<<<<<< HEAD
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -116,5 +146,7 @@ namespace Presentacion.Formularios
         {
 
         }
+=======
+>>>>>>> 4bad4104a4919c52e1bbc2e76930cc79a8b46c14
     }
 }
