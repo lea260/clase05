@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using Negocio.Objetos;
 
@@ -14,6 +15,10 @@ namespace Presentacion.Formularios
 {
     public partial class Form2 : Form
     {
+        public void Hola()
+        {
+
+        }
         private int v = 0;
         private int y = 70;      
         const int altura = 50;
@@ -46,11 +51,37 @@ namespace Presentacion.Formularios
             cmbsintomas.DisplayMember = "sintoma";
             //listo los sintomas;
             ListarSintomas();
-            
+
         }
 
         //eliminar por nombre
         private void EliminarSintomas()
+        {
+            foreach (Control c in Controls)
+            {
+                try
+                {
+                    if (c.Tag!= null)
+                    {
+                        int tag = (int)c.Tag;
+                        if (tag == 1 || tag == 0)
+                        {
+                            Controls.Remove(c);
+                            c.Dispose();
+                            //break;
+                        }
+                    }
+                    
+                }
+                catch (NullReferenceException ex)
+                {
+
+                    //throw;
+                }
+                
+            }            
+        }
+    /*private void EliminarSintomas()
         {
             foreach (Control item in Controls)
             {
@@ -74,7 +105,7 @@ namespace Presentacion.Formularios
                 }
 
             }
-        }
+        }*/
 
         private void ListarSintomas()
         {
