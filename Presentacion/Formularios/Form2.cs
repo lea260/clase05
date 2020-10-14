@@ -57,29 +57,55 @@ namespace Presentacion.Formularios
         //eliminar por nombre
         private void EliminarSintomas()
         {
-            foreach (Control c in Controls)
+            foreach (Control c in this.Controls.OfType<TextBox>())
             {
                 try
                 {
-                    if (c.Tag!= null)
+                    this.Controls.Remove(c);
+                    /*if (c.Tag!= null)
                     {
                         int tag = (int)c.Tag;
                         if (tag == 1 || tag == 0)
                         {
-                            Controls.Remove(c);
+                            this.Controls.Remove(c);
                             c.Dispose();
                             //break;
                         }
-                    }
-                    
+                    }*/
+
                 }
-                catch (NullReferenceException ex)
+                catch (Exception ex)
                 {
 
-                    //throw;
+                    throw;
+                }   
+            }
+
+            foreach (Control c in this.Controls.OfType<Label>())
+            {
+                try
+                {
+                    this.Controls.Remove(c);
+                    /*if (c.Tag != null)
+                    {
+                        int tag = (int)c.Tag;
+                        if (tag == 1 || tag == 0)
+                        {
+                            this.Controls.Remove(c);
+                            c.Dispose();
+                            //break;
+                        }
+                    }*/
+
                 }
-                
-            }            
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+
+
         }
     /*private void EliminarSintomas()
         {

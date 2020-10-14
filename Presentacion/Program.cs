@@ -20,7 +20,7 @@ namespace Presentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormInicio());
-            Application.Run(new Form2());
+            Application.Run(new Login());
         }
     }
 }
